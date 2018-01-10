@@ -11,6 +11,8 @@ app.engine('.hbs', hbs({
   defaultLayout: 'layout'
 }))
 
+app.use('/assets', express.static('public'))
+
 app.set('port', process.env.PORT || 9000)
 
 app.get('/', (req, res) => {
