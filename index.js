@@ -5,13 +5,17 @@ const app = express()
 app.set('view engine', 'hbs')
 
 app.engine('.hbs', hbs({
-  exttname: '.hbs',
+  extname: '.hbs',
   partialsDir: 'views/',
   layoutsDir: 'views/',
-  defaultLayout: 'home'
+  defaultLayout: 'layout'
 }))
 
 app.set('port', process.env.PORT || 9000)
+
+app.get('/', (req, res) => {
+  res.render('home')
+})
 
 app.listen(app.get('port'), () => {
   console.log(`Sucessfully listening on PORT: ${app.get('port')}`)
