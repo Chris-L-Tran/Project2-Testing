@@ -1,8 +1,14 @@
 const express = require('express')
 const hbs = require('express-handlebars')
 const tasks = require('./controllers/tasks')
+const methodOverride = require('method-override')
+const parser = require('body-parser')
 
 const app = express()
+
+app.use(methodOverride('_method'))
+app.use(parser.urlencoded({extended: true}))
+
 app.set('view engine', 'hbs')
 
 app.engine('.hbs', hbs({
