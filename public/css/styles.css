@@ -3,8 +3,25 @@
   color: blue;
   background: red;
   text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+body{
+  display: flex;
+  flex-flow: column;
+  background-color: purple;
+  max-width: 1000px;
+  align-items: flex-end;
+}
+
+nav{
+  background: purple;
 }
 
 .nav-wrapper{
+
   background: blue;
+  max-width: 800px;
 }
