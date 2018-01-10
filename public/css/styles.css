@@ -1,19 +1,25 @@
 .body{
-  align-items: center;
-  color: blue;
-  background: red;
-  text-align: center;
+  background: #c2d6d6;
   display: flex;
-  justify-content: center;
-
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 10px 50px 0 50px;
 }
 
+p{
+  margin: auto;
+  text-align: justify;
+}
+
+h1{
+  width: 100%;
+  background: beige;
+  padding-left: 25px;
+  border-bottom: solid grey;
+
+}
 body{
-  display: flex;
-  flex-flow: column;
-  background-color: purple;
-  max-width: 1000px;
-  align-items: flex-end;
+  background: #4d0000;
 }
 
 nav{
@@ -21,7 +27,52 @@ nav{
 }
 
 .nav-wrapper{
+  background: grey;
+}
 
-  background: blue;
-  max-width: 800px;
+input[type=text]{
+  background: white;
+  border: solid black 9px;
+}
+
+input::placeholder{
+  color: darkgrey;
+}
+
+input{
+    text
+    border: 5px solid orange;
+    -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+
+}
+
+.task-add{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 20px;
+  border: solid black 2px;
+}
+
+form{
+  display: flex;
+  flex-flow: row;
+  align-items: space-between;
+  margin: 20px;
+}
+
+.list{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
 }

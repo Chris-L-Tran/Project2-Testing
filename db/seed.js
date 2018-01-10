@@ -1,4 +1,5 @@
 const Task = require('./schema')
+
 const seedData = require('./seeds.json')
 
 Task.remove({})

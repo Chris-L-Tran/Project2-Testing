@@ -15,12 +15,10 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:name', (req, res) => {
-  Task.findOne({name: req.params.title})
+router.post('/', (req, res) => {
+  Task.create(req.body.task)
     .then((task) => {
-      res.render('task-details', {
-        task: task
-      })
+      res.redirect(`/tasks`)
     })
     .catch((err) => {
       console.log(err)
@@ -31,8 +29,20 @@ router.post('/', (req, res) => {
   res.json(req.body)
 })
 
+router.get('/:name', (req, res) => {
+  Task.findOne({title: req.params.name})
+    .then((task) => {
+      res.render('task-details', {
+        task: task
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+})
+
 router.put('/:name', (req, res) => {
-  Task.findOneAndUpdate({ name: req.params.title }, req.body.task, { new: true })
+  Task.findOneAndUpdate({ title: req.params.name }, req.body.task, { new: true })
     .then((task) => {
       res.redirect(`/tasks/${task.title}`)
     })

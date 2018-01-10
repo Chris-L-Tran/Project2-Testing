@@ -4,6 +4,11 @@ const TaskSchema = new mongoose.Schema({
   title: String
 })
 
-const Task = mongoose.model('Task', TaskSchema)
+// const ListSchema = new mongoose.Schema({
+//   title: String,
+//   items: [TaskSchema]
+// })
 
+const Task = mongoose.model('Task', TaskSchema)
+// const List = mongoose.model('List', ListSchema)
 module.exports = Task

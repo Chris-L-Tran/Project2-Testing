@@ -1,5 +1,15 @@
 <h1> This is the second page</h1>
-There are currently{{tasks.length}} tasks
+
+<div class='input-field'>
+  <form action='/tasks' method='post'>
+    <input type='text' name='task[title]' style='color: blue;' placeholder='New Task'>
+    <input type='submit' value='Add'>
+  </form>
+</div>
+
+<div class='list'>
 {{#each tasks as |task index|}}
-<a href='/tasks/{{task.title}}'>{{task.title}}</a>
+<input type='checkbox' id='{{task.title}}'>
+<label for='{{task.title}}'><a href='/tasks/{{task.title}}'>{{task.title}}</a></label>
 {{/each}}
+</div>
