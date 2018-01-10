@@ -1,7 +1,12 @@
 {{task.title}}
 
-<h2> Change Task </h2>
+<h4> Change Task </h4>
 <form action='/tasks/{{task.title}}?_method=put' method='post'>
   <input type='text' name='task[title]' value='{{task.title}}'>
   <input type='submit' value='Update'>
+</form>
+
+<h4> Delete Task </h4>
+<form action='/tasks/{{task.title}}?_method=delete' method='post'>
+  <input type='submit' value='Delete Task'>
 </form>

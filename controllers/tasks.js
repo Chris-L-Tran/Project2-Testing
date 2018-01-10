@@ -41,6 +41,13 @@ router.put('/:name', (req, res) => {
     })
 })
 
+router.delete('/:name', (req, res) => {
+  Task.findOneAndRemove({name: req.params.title})
+    .then(() => {
+      res.redirect('/tasks')
+    })
+})
+
 router.get('/agenda', (req, res) => {
   res.render('agenda-list')
 })
