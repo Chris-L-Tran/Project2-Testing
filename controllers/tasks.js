@@ -1,10 +1,18 @@
 const express = require('express')
-// const Task = (require('../db/schema'))
+const Task = (require('../db/schema'))
 
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.render('tasks-list')
+  Task.find({})
+    .then((tasks) => {
+      res.render('tasks-list', {
+        tasks: tasks
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 })
 
 router.get('/agenda', (req, res) => {
