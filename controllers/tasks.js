@@ -15,7 +15,20 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:name', (req, res) => {
+  Task.findOne({name: req.params.title})
+    .then((task) => {
+      res.render('task-details', {
+        task: task
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+})
+
 router.get('/agenda', (req, res) => {
   res.render('agenda-list')
 })
+
 module.exports = router
