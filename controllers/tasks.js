@@ -16,13 +16,16 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  Task.create(req.body.task)
-    .then((task) => {
-      res.redirect(`/tasks`)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+  if (req.body.task.title === '') { return }
+  else {
+    Task.create(req.body.task)
+      .then((task) => {
+        res.redirect(`/tasks`)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 })
 
 router.post('/', (req, res) => {

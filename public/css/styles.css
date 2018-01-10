@@ -22,12 +22,21 @@ body{
   background: #4d0000;
 }
 
+#brand-logo{
+  color: #4d0000;
+}
+
 nav{
   background: purple;
 }
 
+.brand-logo{
+    color: black !important;
+}
+
 .nav-wrapper{
-  background: grey;
+  background: #e6e6e6;
+  color: black;
 }
 
 input[type=text]{
