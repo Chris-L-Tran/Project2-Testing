@@ -1,9 +1,15 @@
 .body{
-  background: #c2d6d6;
+  background: #b3ecff;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   margin: 10px 50px 0 50px;
+}
+
+a{
+  color: white !important;
+  display: flex;
+  justify-content: center;
 }
 
 p{
@@ -16,8 +22,8 @@ h1{
   background: beige;
   padding-left: 25px;
   border-bottom: solid grey;
-
 }
+
 body{
   background: #4d0000;
 }
@@ -26,17 +32,27 @@ body{
   color: #4d0000;
 }
 
+img{
+  height: 90%;
+  width: 70%;
+}
+
 nav{
   background: purple;
 }
 
+.pic{
+  display flex;
+  justify-content: center;
+}
+
 .brand-logo{
-    color: black !important;
+    color: white !important;
 }
 
 .nav-wrapper{
-  background: #e6e6e6;
-  color: black;
+  background: #00284d;
+  color: white !important;
 }
 
 input[type=text]{
@@ -81,6 +97,7 @@ form{
 }
 
 .list{
+
   display: flex;
   flex-flow: column;
   align-items: flex-start;

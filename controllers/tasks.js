@@ -55,7 +55,7 @@ router.put('/:name', (req, res) => {
 })
 
 router.delete('/:name', (req, res) => {
-  Task.findOneAndRemove({name: req.params.title})
+  Task.findOneAndRemove({title: req.params.name})
     .then(() => {
       res.redirect('/tasks')
     })
