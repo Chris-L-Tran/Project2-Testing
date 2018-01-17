@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  // You don't need an if-else statement here. You can just use if (req.body.task.title !== ''){}
   if (req.body.task.title === '') { return }
   else {
     Task.create(req.body.task)
