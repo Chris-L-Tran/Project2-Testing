@@ -22,15 +22,7 @@ app.use('/assets', express.static('public'))
 
 app.set('port', process.env.PORT || 9000)
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
-
-app.get('/about', (req, res) => {
-  res.render('about')
-})
-
-app.use('/tasks', tasks)
+app.use('/', tasks)
 
 app.listen(app.get('port'), () => {
   console.log(`Sucessfully listening on PORT: ${app.get('port')}`)
